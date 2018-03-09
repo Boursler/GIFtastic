@@ -15,6 +15,7 @@ function setButtons() {
 }
 function getData() {
 	console.log("hello");
+	$("#gifsDiv").empty();
 	var search = $(this).attr("data-name").trim().split(" ").join("+");
 	var queryURL = "https://api.giphy.com/v1/gifs/search?api_key=" + apiKey + "&q=" + search + "&limit=10";
 	console.log("url = " + queryURL);
@@ -67,6 +68,8 @@ $("#add-anime").click(function addButton() {
 	console.log(newAnime + "anime trying to add");
 });
 
-setButtons();
-$(document).on("click", "button", getData);
-$(document).on("click", "img", interact);
+$(document).ready(function () {
+	setButtons();
+	$(document).on("click", "button", getData);
+	$(document).on("click", "img", interact);
+});
