@@ -15,7 +15,7 @@ function setButtons() {
 }
 function getData() {
 	console.log("hello");
-	var search = $(this).attr("data-name").split(" ").join("+");
+	var search = $(this).attr("data-name").trim().split(" ").join("+");
 	var queryURL = "https://api.giphy.com/v1/gifs/search?api_key=" + apiKey + "&q=" + search + "&limit=10";
 	console.log("url = " + queryURL);
 	$.ajax({
@@ -49,6 +49,10 @@ function interact() {
 	if ($(this).attr("data-state") === "still") {
 		$(this).attr("src", $(this).attr("data-animate"));
 		$(this).attr("data-state", "animate");
+	}
+	else if ($(this).attr("data-state") === "animate") {
+		$(this).attr("src", $(this).attr("data-still"));
+		$(this).attr("data-state", "still");
 	}
 }
 // id="newButton-input
