@@ -1,0 +1,12 @@
+/* background image from Subtle Patterns */
+
+body{
+	font-family: 'Mina', sans-serif;
+	background-image: url("../images/circles-and-roundabouts/circles-and-roundabouts.png.png");
+
+}
+
+button{
+	margin: 5px;
+
+}
