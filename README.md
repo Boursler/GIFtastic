@@ -1,1 +1,2 @@
 # GIFtastic
+This is a program that will take an anime entered into the Submit form and add a button to the page with the Anime's name. If the button is clicked, the Giphy API will be called and 10 anime gifs will appear on the page if the Giphy API can return 10 results. If not, the page will ask the user to try a different anime. Anime can be clicked on to play or pause. When a new button is pressed, the previous Giphy results are cleared. 
